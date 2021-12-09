@@ -162,7 +162,7 @@ focus_tree = {
 
 	focus = {
 		id = AUS_appoint_the_habsburg
-		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		icon = GFX_focus_POL_habsburg
 		mutually_exclusive = { focus = AUS_the_hohenzollern }
 		prerequisite = { focus = AUS_lift_exile_of_nobles }
 		cost = 10
@@ -213,6 +213,10 @@ focus_tree = {
 			mutually_exclusive = { focus = AUS_appoint_the_habsburg }
 			prerequisite = { focus = AUS_lift_exile_of_nobles }
 
+			available = {
+				neutrality > 0.4
+			}
+
 			completion_reward = { 
 				AUS_wilhelm_iii = {
 					add_country_leader_role = {
@@ -226,6 +230,32 @@ focus_tree = {
 					}
 					promote_leader = yes
 					}
+				}
+				set_politics = { ruling_party = neutrality }
+				set_rule = { can_create_factions = yes }
+				set_party_name = { 
+					ideology = neutrality 
+					long_name = "Haus Hohenzollern"
+					name = "Hohenzollern"
+				}
+			}
+		}
+
+		focus = {
+			id = AUS_german_unification
+			icon = GFX_goal_tripartite_pact
+			x = 9
+			y = 4
+			cost = 10
+			prerequisite = { focus = AUS_the_hohenzollern }
+
+			available = {
+				country_exists = GER
+			}
+
+			completion_reward = {
+				GER = {
+					country_event = wtt_germany.75
 				}
 			}
 		}

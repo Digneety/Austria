@@ -1,0 +1,36 @@
+foreign_support = {
+	allowed = {
+		original_tag = AUS
+	}
+
+	available = {
+		has_country_leader = {
+			name = "Wilhelm III"
+			ruling_only = yes
+		}
+	}
+
+	visible = {
+		has_country_leader = {
+			name = "Wilhelm III"
+			ruling_only = yes
+		}
+	}
+
+	cost = 0
+
+	fire_only_once = yes
+
+	remove_effect = {
+		AUS_von_lettow_vorbeck = {
+			corps_commander = {
+				traits = { trickster war_hero media_personality jungle_rat }
+				skill = 4
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 5
+			}
+		}
+	}
+}

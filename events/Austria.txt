@@ -64,3 +64,29 @@ country_event = {
 		}
 	}
 }
+# Germany refuses Unification of German People
+country_event = {
+	id = austria.3
+	title = austria.3.t
+	desc = austria.3.d
+
+	picture = GFX_news_event_gathering_protest
+
+	is_triggered_only = yes
+
+	#Wargoal and can later unify germany with cores as decision
+	option = {
+		name = austria.3.a
+		create_wargoal = { type = annex_everything target = GER }
+		GER = {
+			add_opinion_modifier = { target = AUS modifier = large_decrease }
+		}
+	}
+	#Back down
+	option = {
+		name = austria.3.b
+		custom_effect_tooltip = {
+			war_support_factor = -0.3
+		}
+	}
+}
