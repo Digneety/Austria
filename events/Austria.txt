@@ -1,0 +1,66 @@
+###########################
+# Austrian Events
+###########################
+
+add_namespace = austria
+
+
+country_event = {
+	id = austria.0
+	title = austria.0.t
+	desc = austria.0.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria.1.a
+		set_province_name = { id = 11666 name = "Wien" }
+      	set_province_name = { id = 692 name = "München" }
+      	set_province_name = { id = 11544 name = "Nüremberg" }
+      	set_province_name = { id = 6469 name = "Düsseldorf" }
+		835 = { set_state_name = "Wien" }
+		4 = { set_state_name = "Niederösterreich" }
+		152 = { set_state_name = "Oberösterreich" }
+		153 = { set_state_name = "Tirol" }
+		837 = { set_state_name = "Steiermark" }
+	}
+	option = {
+		name = austria.1.b
+		set_province_name = { id = 11666 name = "Vienna" }
+      	set_province_name = { id = 692 name = "Munich" }
+      	set_province_name = { id = 11544 name = "Nuremberg" }
+      	set_province_name = { id = 6469 name = "Dusseldorf" }
+		835 = { set_state_name = "Vienna" }
+		4 = { set_state_name = "Lower Austria" }
+		152 = { set_state_name = "Upper Austria" }
+		153 = { set_state_name = "Tyrol" }
+		837 = { set_state_name = "Styria" }
+	}
+}
+
+country_event = {
+	id = austria.2
+	title = austria.2.t
+	desc = austria.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria.2.a
+		155 = { add_core_of = AUS }
+		154 = { add_core_of = AUS }
+		43 = { add_core_of = AUS }
+		set_cosmetic_tag = AUS_HUN
+		swap_ideas = {
+			remove_idea = AUS_hungarian_nationalists
+			add_idea = AUS_hungarian_compromise
+		}
+	}
+	option = {
+		name = austria.2.b
+		set_autonomy = {
+			target = HUN
+			autonomy_state = autonomy_integrated_puppet
+		}
+	}
+}

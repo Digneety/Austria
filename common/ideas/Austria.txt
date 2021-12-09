@@ -1,0 +1,122 @@
+ideas = {
+    country = {
+            AUS_promoted_industrial_work = {
+            allowed = {
+                original_tag = AUS
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+
+            picture = generic_build_infrastructure
+
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.5
+                industrial_capacity_factory = 0.2
+                industrial_capacity_dockyard = 0.2
+            }
+        }
+
+        AUS_strengthen_the_fascists = {
+            picture = generic_fascism_drift_2
+            allowed = {
+                original_tag = AUS
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                fascism_drift = 0.1
+            }
+        }
+
+        AUS_strengthen_the_monarchists = {
+            picture = HUN_hungarian_monarchy
+            allowed = {
+                original_tag = AUS
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                neutrality_drift = 0.1
+            }
+        }
+
+        AUS_strengthen_the_monarchists_2 = {
+            picture = HUN_hungarian_monarchy
+            allowed = {
+                original_tag = AUS
+                always = no
+            }
+
+            allowed_civil_war = {
+				has_government = neutrality
+			}
+
+            removal_cost = -1
+
+            modifier = {
+				neutrality_drift = 0.1
+				stability_factor = 0.1
+			}
+        }
+
+        AUS_strengthen_fascists_2 = {
+            picture = generic_fascism_drift_2
+            allowed = {
+                original_tag = AUS
+                always = no
+            }
+
+            allowed_civil_war = {
+				has_government = neutrality
+			}
+
+            removal_cost = -1
+
+            modifier = {
+				neutrality_drift = 0.02
+				stability_factor = 0.1
+			}
+        }
+
+        AUS_hungarian_nationalists = {
+            picture = GFX_idea_hungarian_nationalists
+            allowed = {
+                always = yes
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            removal_cost = -1
+
+            modifier = {
+                conscription = -0.030
+                political_power_gain = -0.5
+            }
+        }
+
+        AUS_hungarian_compromise = {
+            picture = GFX_idea_the_hungarian_compromise
+            allowed = {
+                always = yes
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            removal_cost = -1
+
+            modifier = {
+                conscription = 0.03
+                political_power_gain = 0.5
+            }
+        }
+    }
+}
