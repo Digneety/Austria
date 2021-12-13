@@ -4,39 +4,44 @@
 
 add_namespace = austria
 
-# Event for the city names - German or English
-country_event = {
-	id = austria.0
-	title = austria.0.t
-	desc = austria.0.d
 
-	is_triggered_only = yes
+##########################################
+########### MOVED TO DECISIONS ############
+##########################################
+#### Event for the city names - German or English ####
+#country_event = {
+#	id = austria.0
+#	title = austria.0.t
+#	desc = austria.0.d
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = austria.1.a
+#		set_province_name = { id = 11666 name = "Wien" }
+#     	set_province_name = { id = 692 name = "München" }
+#    	set_province_name = { id = 11544 name = "Nüremberg" }
+#      	set_province_name = { id = 6469 name = "Düsseldorf" }
+#		835 = { set_state_name = "Wien" }
+#		4 = { set_state_name = "Niederösterreich" }
+#		152 = { set_state_name = "Oberösterreich" }
+#		153 = { set_state_name = "Tirol" }
+#		837 = { set_state_name = "Steiermark" }
+#	}
+#	option = {
+#		name = austria.1.b
+#		set_province_name = { id = 11666 name = "Vienna" }
+#     	set_province_name = { id = 692 name = "Munich" }
+#    	set_province_name = { id = 11544 name = "Nuremberg" }
+#      	set_province_name = { id = 6469 name = "Dusseldorf" }
+#		835 = { set_state_name = "Vienna" }
+#		4 = { set_state_name = "Lower Austria" }
+#		152 = { set_state_name = "Upper Austria" }
+#		153 = { set_state_name = "Tyrol" }
+#		837 = { set_state_name = "Styria" }
+#	}
+#}
 
-	option = {
-		name = austria.1.a
-		set_province_name = { id = 11666 name = "Wien" }
-      	set_province_name = { id = 692 name = "München" }
-      	set_province_name = { id = 11544 name = "Nüremberg" }
-      	set_province_name = { id = 6469 name = "Düsseldorf" }
-		835 = { set_state_name = "Wien" }
-		4 = { set_state_name = "Niederösterreich" }
-		152 = { set_state_name = "Oberösterreich" }
-		153 = { set_state_name = "Tirol" }
-		837 = { set_state_name = "Steiermark" }
-	}
-	option = {
-		name = austria.1.b
-		set_province_name = { id = 11666 name = "Vienna" }
-      	set_province_name = { id = 692 name = "Munich" }
-      	set_province_name = { id = 11544 name = "Nuremberg" }
-      	set_province_name = { id = 6469 name = "Dusseldorf" }
-		835 = { set_state_name = "Vienna" }
-		4 = { set_state_name = "Lower Austria" }
-		152 = { set_state_name = "Upper Austria" }
-		153 = { set_state_name = "Tyrol" }
-		837 = { set_state_name = "Styria" }
-	}
-}
 # Event for the Hungarian Question
 country_event = {
 	id = austria.2
@@ -138,25 +143,178 @@ country_event = {
 }
 
 country_event = {
-	id = austria.5 
-	title = austria.5.t
-
-	fire_only_once = yes
-	is_triggered_only = yes
+	id = austria.1
 
 	trigger = {
-		AUS = { controls_province = 9960 }
+		AUS = { controls_state = 43 }
+	}
+
+	immediate = { 
+		43 = { set_state_name = "Zentralungran" }
+		set_province_name = {
+			id = 9660
+			name = "Budapest"
+		}
+	}
+	hidden = yes
+}
+#Renaming Hungary
+country_event = {
+	id = austria.0
+
+	trigger = {
+		AUS = { controls_state = 154 }
 	}
 
 	immediate = {
-		set_province_name = {
-			id = 9960
-			name = "Buda-pest"
-		}
+		154 = { set_state_name = "Niederungarn" }
+		set_province_name = { id = 11659 name = "Debrezin" }
+	}
+	hidden = yes
+}
+
+#Renaming Bohemia to Böhmen
+country_event = {
+	id = austria.5
+
+	trigger = {
+		AUS = { controls_state = 9 }
+	}
+
+	immediate = { 
+		9 = { set_state_name = "Böhmen" }
+		set_province_name = { id = 11542 name = "Prag" }
+		set_province_name = { id = 6418 name = "Pilsen" }
+		set_province_name = { id = 9569 name = "Tabor" }
 	}
 
 	hidden = yes
+}
+#Renaming Sudetenland to Deutsch-Böhmen which was the historical name under the Austrian Empire/Austria-Hungary
+country_event = {
+	id = austria.6
 
-	
+	trigger = {
+		AUS = { controls_state = 69 }
+	}
 
+	immediate = { 
+		69 = { set_state_name = "Deutsch-Böhmen" }
+		set_province_name = { id = 3585 name = "Karlsbad" }
+		set_province_name = { id = 11401 name = "Reichenberg" }
+	}
+
+	hidden = yes
+}
+
+#Oberungarn
+country_event = {
+	id = austria.7
+
+	trigger = {
+		AUS = { controls_state = 71 }
+	}
+
+	immediate = { 
+		71 = { set_state_name = "Oberungarn" }
+		set_province_name = { id = 3581 name = "Preschau" }
+	}
+
+	hidden = yes
+}
+#Karpatenukraine
+country_event = {
+	id = austria.8
+
+	trigger = {
+		AUS = { controls_state = 73 }
+	}
+
+	immediate = { 
+		73 = { set_state_name = "Karpatenukraine" }
+		set_province_name = { id = 3548 name = "Munkatsch" }
+	}
+
+	hidden = yes
+}
+
+#Mähren
+country_event = {
+	id = austria.9
+
+	trigger = {
+		AUS = { controls_state = 74 }
+	}
+
+	immediate = { 
+		74 = { set_state_name = "Deutsch-Mähren" }
+		set_province_name = { id = 3583 name = "Ostrau" }
+	}
+
+	hidden = yes
+}
+
+#Transdanubien
+country_event = {
+	id = austria.10
+
+	trigger = {
+		AUS = { controls_state = 155 }
+	}
+
+	immediate = { 
+		155 = { set_state_name = "Transdanubien" }
+		set_province_name = { id = 11610 name = "Fünfkirchen" }
+	}
+
+	hidden = yes
+}
+
+#Slovakenland
+country_event = {
+	id = austria.11
+
+	trigger = {
+		AUS = { controls_state = 70 }
+	}
+
+	immediate = { 
+		70 = { set_state_name = "Slowakei" }
+		set_province_name = { id = 11539 name = "Sillein" }
+	}
+
+	hidden = yes
+}
+
+#Mähren
+country_event = {
+	id = austria.12
+
+	trigger = {
+		AUS = { controls_state = 75 }
+	}
+
+	immediate = { 
+		75 = { set_state_name = "Mähren" }
+		set_province_name = { id = 3569 name = "Brünn" }
+		set_province_name = { id = 6562 name = "Olmütz" }
+	}
+
+	hidden = yes
+}
+
+#Mähren
+country_event = {
+	id = austria.13
+
+	trigger = {
+		AUS = { controls_state = 664 }
+	}
+
+	immediate = { 
+		664 = { set_state_name = "Südslowakei" }
+		set_province_name = { id = 6573 name = "Kaschau" }
+	}
+
+	hidden = yes
 }

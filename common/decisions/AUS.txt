@@ -1,4 +1,4 @@
-foreign_support = {
+prestigious_projects = {
 	AUS_recruit_von_lettow = {
 		allowed = {
 			original_tag = AUS
@@ -30,23 +30,87 @@ foreign_support = {
 		}
 	}
 
-	AUS_rename_city = {
-		allowed = { always = no }
-		icon = ger_mefo_bills
+	AUS_rename_city_english = {
+		allowed = { original_tag = AUS }
 
-		available = { 
-			original_tag = AUS
-			AUS = { controls_province = 9960 }
+		cost = 0
+
+		days_re_enable = 5
+
+		complete_effect = {
+			set_province_name = { id = 11666 name = "Vienna" }
+			set_province_name = { id = 692 name = "Munich" }
+			set_province_name = { id = 11544 name = "Nuremberg" }
+			set_province_name = { id = 6469 name = "Dusseldorf" }
+			835 = { set_state_name = "Vienna" }
+			4 = { set_state_name = "Lower Austria" }
+			152 = { set_state_name = "Upper Austria" }
+			153 = { set_state_name = "Tyrol" }
+			837 = { set_state_name = "Styria" }
+		}
+	}
+
+	AUS_rename_city_german = {
+		allowed = { original_tag = AUS }
+
+		cost = 0
+
+		days_re_enable = 5
+
+		remove_effect = {
+			set_province_name = { id = 11666 name = "Wien" }
+			set_province_name = { id = 692 name = "München" }
+			set_province_name = { id = 11544 name = "Nüremberg" }
+			set_province_name = { id = 6469 name = "Düsseldorf" }
+			835 = { set_state_name = "Wien" }
+			4 = { set_state_name = "Niederösterreich" }
+			152 = { set_state_name = "Oberösterreich" }
+			153 = { set_state_name = "Tirol" }
+			837 = { set_state_name = "Steiermark" }
+		}
+	}
+}
+
+reintegration_of_homeland = {
+	 AUS_integrate_HUN = {
+		 available = {
+			 controls_state = 155 #Transdanubien
+			 controls_state = 154 #Niederungarn
+			 controls_state = 43 #Zentralungarn
+		 }
+
+		 fire_only_once = yes
+
+		 complete_effect = {
+			 HUN = { 
+				 every_state = { add_core_of = AUS } 
+				 every_unit_leader = {
+					set_nationality = AUS
+				}
+			}
+		 }
+	 }
+
+	 AUS_integrate_CZE = {
+		available = {
+			controls_state = 9 #Böhmen
+			controls_state = 69 #Deutsch-Böhmen
+			controls_state = 71 #Oberungarn/Slowakei
+			controls_state = 73 #Karpatenukraine
+			controls_state = 74 #Deutsch-Mähren
+			controls_state = 70 #Slowakei
+			controls_state = 75 #Mähren
+			controls_state = 664 #Südslowakei
 		}
 
-		days_mission_timeout = 1
-		is_good = yes
 		fire_only_once = yes
 
 		complete_effect = {
-			set_province_name = {
-				id = 9960
-				name = "Buda-pest"
+			CZE = { 
+				every_state = { add_core_of = AUS } 
+				every_unit_leader = {
+					set_nationality = AUS
+				}
 			}
 		}
 	}

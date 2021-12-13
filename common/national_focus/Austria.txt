@@ -291,8 +291,9 @@ focus_tree = {
 					hidden_effect = {
 						news_event = news.22291
 					}
+				}
 			}
-		}
+		
 
 
 		focus = {
@@ -306,6 +307,46 @@ focus_tree = {
 
 			completion_reward = { 
 				country_event = austria.2
+			}
+		}
+
+		focus = {
+			id = AUS_protect_czechia
+			icon = GFX_AUS_goal_hungarian_compromise
+			cost = 10
+			x = 7
+			y = 6
+			completion_reward = { 
+				#CZECHIA HERE
+			}
+		}
+
+		focus = {
+			id = AUS_split_poland
+			icon = GFX_AUS_goal_hungarian_compromise
+			cost = 10
+			x = 7
+			y = 6
+			completion_reward = { 
+				#SPLIT OBVIOUSLY ONLY WORKS WHEN GERMANY EXISTS
+				#SPLIT POLAND BETWEEN SOVIETS GERMANS, AUSTRIA AND LITHUANIANS
+				#AUSTRIA SHOULD GET KRAKOW LWOW AND STANISLAWOW, (KIELCE) low chance
+				#GERMANY GETS DANZIG, POSEN, LODZ, PLOCK, AND KATTOWITZ
+				#SOVIETS GETS WOLYN, POLISE, NOWOGORODEK, LUBLIN, BIALYSTOK, WARSCHAU
+				#LITHUANIA GETS WILNO
+
+			}
+		}
+
+		focus = {
+			id = AUS_split_yugo
+			icon = GFX_AUS_goal_hungarian_compromise
+			cost = 10
+			x = 7
+			y = 6
+			completion_reward = { 
+				#SPLIT BETWEEN ROMANIA AUSTRIA BULGARIA AND ITALY
+
 			}
 		}
 
