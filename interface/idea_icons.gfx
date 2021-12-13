@@ -1,14 +1,18 @@
 spriteTypes = {
-  SpriteType = {
+  spriteType = {
     name = "GFX_idea_hungarian_nationalists"
     texture = "gfx/interface/ideas/hungarian_nationalists.dds"
   }
-  SpriteType = {
+  spriteType = {
     name = "GFX_idea_the_hungarian_compromise"
     texture = "gfx/interface/ideas/hungarian_compromise.dds"
   }
-  SpriteType = {
+  spriteType = {
     name = "GFX_idea_karl_eggsler"
     texture = "gfx/interface/ideas/idea_karl_eggsler.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_louis_ferdinand"
+    texture = "gfx/interface/ideas/idea_louis_ferdinand.png"
   }
 }

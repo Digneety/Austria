@@ -13262,3 +13262,8 @@ news_event = {
 		}
 	}
 }
+
+#news_event = {
+#	id = news.2292
+#	title = news.2292.t
+#}

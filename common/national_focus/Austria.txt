@@ -218,19 +218,7 @@ focus_tree = {
 			}
 
 			completion_reward = { 
-				AUS_wilhelm_iii = {
-					add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = despotism
-						traits = {
-							son_of_the_last_german_emperor
-							rearmer			
-						}
-					}
-					promote_leader = yes
-					}
-				}
+				country_event = austria.4
 				set_politics = { ruling_party = neutrality }
 				set_rule = { can_create_factions = yes }
 				set_party_name = { 

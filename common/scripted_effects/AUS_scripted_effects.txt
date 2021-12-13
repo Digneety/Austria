@@ -1,0 +1,4 @@
+rename_hungarian_provinces = {
+	set_province_name = { id = 9960 name = "Buda-pest" }
+	set_province_name = { id = 11569 name = "Debrezin" }
+}

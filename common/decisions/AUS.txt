@@ -1,35 +1,52 @@
 foreign_support = {
-	allowed = {
-		original_tag = AUS
-	}
-
-	available = {
-		has_country_leader = {
-			name = "Wilhelm III"
-			ruling_only = yes
+	AUS_recruit_von_lettow = {
+		allowed = {
+			original_tag = AUS
+		}
+	
+		available = {
+			has_country_leader = {
+				name = "Wilhelm III"
+				name = "Viktoria Louise von Preußen"
+				ruling_only = yes
+			}
+		}
+	
+		cost = 0
+	
+		fire_only_once = yes
+	
+		remove_effect = {
+			AUS_von_lettow_vorbeck = {
+				create_corps_commander = {
+					traits = { trickster war_hero media_personality jungle_rat }
+					skill = 4
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 5
+				}
+			}
 		}
 	}
 
-	visible = {
-		has_country_leader = {
-			name = "Wilhelm III"
-			ruling_only = yes
+	AUS_rename_city = {
+		allowed = { always = no }
+		icon = ger_mefo_bills
+
+		available = { 
+			original_tag = AUS
+			AUS = { controls_province = 9960 }
 		}
-	}
 
-	cost = 0
+		days_mission_timeout = 1
+		is_good = yes
+		fire_only_once = yes
 
-	fire_only_once = yes
-
-	remove_effect = {
-		AUS_von_lettow_vorbeck = {
-			corps_commander = {
-				traits = { trickster war_hero media_personality jungle_rat }
-				skill = 4
-				attack_skill = 3
-				defense_skill = 3
-				planning_skill = 3
-				logistics_skill = 5
+		complete_effect = {
+			set_province_name = {
+				id = 9960
+				name = "Buda-pest"
 			}
 		}
 	}

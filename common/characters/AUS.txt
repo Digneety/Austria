@@ -28,13 +28,39 @@ characters={
 			civilian={
 				large="gfx/leaders/AUS/portrait_wilhelm_iii.dss"
 			}
+		army = {
+			large="gfx/leaders/AUS/portrait_wilhelm_iii_army.dds"
+			}
+		}
+	}
+
+	AUS_wilhelm_ii = {
+		name = AUS_wilhelm_ii
+		civilian={
+			large="gfx/leaders/AUS/portrait_wilhelm_ii.dds"
+		}
+	}
+
+	AUS_viktoria = { #Empty Vicky3 
+		name=AUS_viktoria
+		portraits={
+			civilian={
+				large="GFX_portrait_ger_victoria_louise"
+			}
+		}
+	}
+
+	AUS_louis_ferdinand = {
+		name = AUS_louis_ferdinand
+		army={
+			large="gfx/leaders/AUS/portrait_louis_ferdinand.dds"
 		}
 	}
 
 	AUS_von_lettow_vorbeck = {
 		name = AUS_von_lettow_vorbeck
 		portraits = {
-			civilian={
+			army={
 				large="gfx/leaders/AUS/portrait_von_lettow_vorbeck.dss"
 			}
 		}

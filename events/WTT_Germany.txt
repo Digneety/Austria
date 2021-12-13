@@ -3443,18 +3443,30 @@ country_event = {
 
 	is_triggered_only = yes
 
-	#Accept
+	#Accept - Rheinland is automatically no longer a DMZ
 	option = {
 		name = wtt_germany.75.a
 		ai_chance = {
 			factor = 90
 		}
+		GER = {
+			every_unit_leader = {
+				set_nationality = AUS
+			}
+		}
 		AUS = {
 			annex_country = { target = GER transfer_troops = yes }
 			set_cosmetic_tag = AUS_GER
 		}
+		42 = { set_demilitarized_zone = no } 
+		51 = { set_demilitarized_zone = no }
+
+		every_state = {
+			limit = { is_core_of = GER }
+			add_core_of = AUS
+		}
 	}
-	#Reject
+	#Reject - everything stays as it is Austria gets to decide if they want to back down or take it by force(i doubt it)
 	option = {
 		name = wtt_germany.75.b
 		ai_chance = {
